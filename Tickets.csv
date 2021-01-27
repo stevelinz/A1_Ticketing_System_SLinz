@@ -4,3 +4,4 @@ TicketID, Summary, Status, Priority, Submitter, Assigned, Watching
 3,Bug - crashes,new,high,Steve,Joe,Sam |Bob|Tim
 4,User Story - new table Sales,new,high,Steve,Joe,Sam|Bob
 5,Bug - wrong output Sales,New,High,Steve Linz,Bob Smith,Joe Sonos|Tim Todd
+6,New Feature,New,low,Steve Linz,Bob Smith,Tim Todd|Mary Vance

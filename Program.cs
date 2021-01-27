@@ -45,6 +45,8 @@ namespace A1_Ticketing_System_SLinz
                 summary = Console.ReadLine();
                 if (summary == "D" || summary == "d")
                 {
+                   sr.Close();
+                   sw.Close();
                    break;  
                 }
                 else
@@ -84,8 +86,9 @@ namespace A1_Ticketing_System_SLinz
             }
 
             sw.Close();
-            //sr.Close();
+            sr.Close();
         }
+        
     }
 }
 
