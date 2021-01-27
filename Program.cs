@@ -84,7 +84,7 @@ namespace A1_Ticketing_System_SLinz
             }
 
             sw.Close();
-            sr.Close();
+            //sr.Close();
         }
     }
 }
