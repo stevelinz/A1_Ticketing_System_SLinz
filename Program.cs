@@ -14,15 +14,27 @@ namespace A1_Ticketing_System_SLinz
         {
             string file = "Tickets.csv";
             StreamReader sr = new StreamReader(file);
-            try{
+
+            try
             {
-                sr.Read();
-            } 
+                using (StreamReader srTest = File.OpenText(file))
+                {
+                    Console.WriteLine($"The first line of this file is {sr.ReadLine()}");
+                }
             }
-            catch (FileNotFoundException e){
-                System.Console.WriteLine(e);
+            catch (FileNotFoundException e)
+            {
+                Console.WriteLine($"The file was not found: '{e}'");
             }
-            
+            catch (DirectoryNotFoundException e)
+            {
+                Console.WriteLine($"The directory was not found: '{e}'");
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine($"The file could not be opened: '{e}'");
+            }
+
             StreamWriter sw = new StreamWriter(file, true);
             // array for watching names
             string[] watchNames = new string[9];
@@ -37,7 +49,7 @@ namespace A1_Ticketing_System_SLinz
                 current = line.Substring(0, 1);
             }
             ticketID = Int32.Parse(current); //get the current ticketID
-
+                                    
 
             while (true)
             {
@@ -45,16 +57,15 @@ namespace A1_Ticketing_System_SLinz
                 summary = Console.ReadLine();
                 if (summary == "D" || summary == "d")
                 {
-                   sr.Close();
-                   sw.Close();
-                   break;  
+                    sw.Close();
+                    break;
                 }
                 else
                 {
                     ticketID++;
                 }
-                inputReturn = ticketInput.inputTicket(); 
-        
+                inputReturn = ticketInput.inputTicket();
+
                 Console.Write("Watching this ticket: You add can up to 8 people, type D if done: ");
                 watching = Console.ReadLine();
                 for (i = 0; i < 9; i++)
@@ -79,16 +90,16 @@ namespace A1_Ticketing_System_SLinz
                         watching = Console.ReadLine();
                     }
                 }
- 
+
                 sw.WriteLine("{0},{1},{2},{3}", ticketID, summary, inputReturn, watchString);
                 watchString = "";
                 Array.Clear(watchNames, 0, i);
             }
 
             sw.Close();
-            sr.Close();
+            
         }
-        
+
     }
 }
 

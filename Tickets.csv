@@ -1,7 +1,10 @@
-TicketID, Summary, Status, Priority, Submitter, Assigned, Watching
+ TicketID, Summary, Status, Priority, Submitter, Assigned, Watching
 1,Bug,Open,High,Drew Kjell,Jane Doe,Drew Kjell|John Smith|Bill Jones
 2,user story,New,Low,steve,joe,sam|mary
 3,Bug - crashes,new,high,Steve,Joe,Sam |Bob|Tim
 4,User Story - new table Sales,new,high,Steve,Joe,Sam|Bob
 5,Bug - wrong output Sales,New,High,Steve Linz,Bob Smith,Joe Sonos|Tim Todd
 6,New Feature,New,low,Steve Linz,Bob Smith,Tim Todd|Mary Vance
+7,bug ,old,low,Joe Adams,Sam,Steve Linz|Tim Todd
+8,User Story,new,high,Tim Todd,Mary Vance,Steve Linz
+9,Bug : Crashes,Open,High,Steve Linz,Mary Vance,Tim Todd|Bill Jones
