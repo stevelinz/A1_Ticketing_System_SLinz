@@ -14,12 +14,12 @@ namespace A1_Ticketing_System_SLinz
         {
             string file = "Tickets.csv";
             StreamReader sr = new StreamReader(file);
-            StreamWriter sw = new StreamWriter(file, true);
             // array for watching names
             string[] watchNames = new string[9];
             int i = 0, ticketID = 0, watchCount = 0;
             TicketInput ticketInput = new TicketInput();
-            string current = "", watchString = "", watching = "", summary = "", inputReturn = "";
+            string current = "", watchString = "", watching = "", 
+            summary = "", inputReturn = "", start = "";
 
             try
             {
@@ -46,8 +46,13 @@ namespace A1_Ticketing_System_SLinz
             {
                 Console.WriteLine($"The file could not be opened: '{e}'");
             }
-
-
+            StreamWriter sw = new StreamWriter(file, true);
+            Info info = new Info();
+            info.requirements();
+            System.Console.WriteLine("Press any key to enter the A1-Ticket process");
+            start = Console.ReadLine();
+            
+            sr.Close();
             while (true)
             {
                 Console.Write("Summary of this ticket, or type D if done: ");
