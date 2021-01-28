@@ -46,13 +46,13 @@ namespace A1_Ticketing_System_SLinz
             {
                 Console.WriteLine($"The file could not be opened: '{e}'");
             }
+            sr.Close();
             StreamWriter sw = new StreamWriter(file, true);
             Info info = new Info();
             info.requirements();
             System.Console.WriteLine("Press any key to enter the A1-Ticket process");
             start = Console.ReadLine();
             
-            sr.Close();
             while (true)
             {
                 Console.Write("Summary of this ticket, or type D if done: ");
