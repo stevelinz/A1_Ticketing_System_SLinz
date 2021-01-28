@@ -1,4 +1,4 @@
- TicketID, Summary, Status, Priority, Submitter, Assigned, Watching
+TicketID, Summary, Status, Priority, Submitter, Assigned, Watching
 1,Bug,Open,High,Drew Kjell,Jane Doe,Drew Kjell|John Smith|Bill Jones
 2,user story,New,Low,steve,joe,sam|mary
 3,Bug - crashes,new,high,Steve,Joe,Sam |Bob|Tim
