@@ -70,7 +70,7 @@ namespace A1_Ticketing_System_SLinz
                 {
                     Console.Write("Summary of this ticket, numbers NOT allowed. type D if done: ");
                     summary = Console.ReadLine();
-                    if (digitsFound(summary)) break;
+                    if (digitsFound(summary)) continue;
                 }
 
 
